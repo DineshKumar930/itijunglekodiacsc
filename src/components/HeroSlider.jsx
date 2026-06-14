@@ -57,7 +57,7 @@ const HeroSlider = () => {
       image: "/images/iti4.png",
       buttonText: "View Placements",
       buttonLink: "/placements"
-    },
+    }
     
   ];
 

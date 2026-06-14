@@ -5,16 +5,18 @@ import About from './components/About'
 import Trades from './components/Trades'
 import Admission from './components/Admission'
 import Instructor from './components/Instructor'
-import Footer from './components/Footer'
-import FloatingButtons from './components/FloatingButtons' // Add this import
-import './App.css'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
+import FloatingButtons from './components/FloatingButtons'
+import Modal from './components/Modal' // Import Modal
+
+import './App.css'
 
 function App() {
   const [activeTab, setActiveTab] = useState('Home')
 
   const renderComponent = () => {
-    switch(activeTab) {
+    switch (activeTab) {
       case 'Home':
         return <HeroSlider />
       case 'About':
@@ -34,12 +36,25 @@ function App() {
 
   return (
     <div className="app">
-      <Header activeTab={activeTab} setActiveTab={setActiveTab} />
+      {/* Admission Popup Modal */}
+      <Modal />
+
+      {/* Website Header */}
+      <Header 
+        activeTab={activeTab}
+        setActiveTab={setActiveTab}
+      />
+
+      {/* Main Content */}
       <main className="main-content">
         {renderComponent()}
       </main>
+
+      {/* Footer */}
       <Footer />
-      <FloatingButtons /> {/* Add this line - after Footer */}
+
+      {/* WhatsApp, Call, etc Floating Buttons */}
+      <FloatingButtons />
     </div>
   )
 }
