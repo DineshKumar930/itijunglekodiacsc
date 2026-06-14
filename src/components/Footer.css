@@ -1,0 +1,240 @@
+/* components/Footer.css - UPDATED */
+
+/* Add this at the beginning of your Footer.css */
+* {
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.footer {
+  background: #0f172a;
+  color: white;
+  padding: 3rem 5% 1rem;
+  overflow-x: hidden; /* FIX 1: Prevent horizontal scroll */
+  width: 100%;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem 1rem; /* FIX 2: Change from 5% to fixed padding on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 0.75rem 1rem;
+  }
+}
+
+.container {
+  max-width: 100%; /* FIX 3: Ensure container doesn't overflow */
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+  max-width: 100%; /* FIX 4: Prevent grid overflow */
+}
+
+@media (max-width: 768px) {
+  .footer-grid {
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* FIX 5: Smaller min width on mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-grid {
+    gap: 1.25rem;
+    grid-template-columns: 1fr; /* FIX 6: Stack on very small screens */
+  }
+}
+
+.footer-section {
+  min-width: 0; /* FIX 7: Allow sections to shrink */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.footer-section h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(135deg, #fff, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  word-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+  .footer-section h3 {
+    font-size: 1.3rem;
+  }
+}
+
+.footer-section h4 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: #60a5fa;
+  word-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+  .footer-section h4 {
+    font-size: 1rem;
+  }
+}
+
+.footer-section p {
+  color: #cbd5e1;
+  line-height: 1.6;
+  font-size: 0.9rem;
+  word-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+  .footer-section p {
+    font-size: 0.85rem;
+  }
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0.5rem 0;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+  .contact-details p {
+    gap: 8px;
+    font-size: 0.8rem;
+  }
+}
+
+.contact-details svg {
+  color: #60a5fa;
+  flex-shrink: 0; /* FIX 8: Prevent icons from shrinking */
+  min-width: 16px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-section li {
+  margin-bottom: 0.7rem;
+}
+
+.footer-section a {
+  color: #cbd5e1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  display: inline-block; /* FIX 9: Make padding-left work properly */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+}
+
+@media (max-width: 480px) {
+  .footer-section a {
+    font-size: 0.85rem;
+  }
+}
+
+.footer-section a:hover {
+  color: #60a5fa;
+  padding-left: 5px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2rem;
+  border-top: 1px solid #334155;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap; /* FIX 10: Wrap icons on very small screens */
+  justify-content: center;
+}
+
+.social-icons a {
+  width: 35px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: all 0.3s ease;
+  flex-shrink: 0; /* FIX 11: Prevent icon buttons from shrinking */
+}
+
+@media (max-width: 480px) {
+  .social-icons a {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.social-icons a:hover {
+  background: #2563eb;
+  transform: translateY(-3px);
+}
+
+.copyright p {
+  color: #94a3b8;
+  font-size: 0.85rem;
+  word-wrap: break-word;
+}
+
+@media (max-width: 480px) {
+  .copyright p {
+    font-size: 0.75rem;
+  }
+}
+
+.copyright {
+  text-align: center;
+  padding: 15px 10px;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.developer-link {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.developer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}

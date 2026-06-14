@@ -1,0 +1,453 @@
+/* Header Container */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: #ffffff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow-x: hidden;
+}
+
+.header.scrolled {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* ===== TOP SECTION ===== */
+.top-header {
+  background: linear-gradient(135deg, #ffffff 0%, #e3f2fd 100%);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+  z-index: 1;
+}
+
+.header-row {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.logo-left, .logo-right {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+}
+
+
+.header-title {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.college-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 0.3rem 0;
+  color: #1e3c72;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.college-description {
+  font-size: 0.85rem;
+  color: #4a5568;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.logo-img {
+  width: 70px;
+  height: 80px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* ===== BOTTOM SECTION: Navigation ===== */
+.nav-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  position: relative;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+}
+
+.nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+}
+
+/* Desktop Menu */
+.desktop-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5rem;
+}
+
+.menu-item {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+  border-radius: 8px;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+.menu-item.active {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.menu-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background: #ffd700;
+  border-radius: 3px 3px 0 0;
+}
+
+/* Mobile Toggle Button */
+.mobile-toggle-btn {
+  display: none;
+  background: none;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 10000;
+}
+
+.mobile-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-toggle-btn i {
+  font-size: 1.3rem;
+}
+
+.menu-text {
+  font-size: 1rem;
+}
+
+/* ===== MOBILE MENU OVERLAY - COMPLETE FIX ===== */
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  z-index: 9999;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  visibility: hidden;
+}
+
+.mobile-menu-overlay.open {
+  transform: translateX(0);
+  visibility: visible;
+}
+
+/* Mobile Menu Header */
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.mobile-menu-header h3 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.close-menu-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.5rem 0.8rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.close-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Mobile Menu Items */
+.mobile-menu {
+  list-style: none;
+  margin: 0;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.mobile-menu-item {
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+.mobile-menu-item i {
+  width: 24px;
+  font-size: 1rem;
+  transition: transform 0.3s ease;
+  color: #ffd700;
+}
+
+.mobile-menu-item span {
+  flex: 1;
+}
+
+.mobile-menu-item:hover {
+  background: rgba(255, 255, 255, 0.15);
+  padding-left: 2rem;
+}
+
+.mobile-menu-item:hover i {
+  transform: translateX(8px);
+}
+
+.mobile-menu-item.active-mobile {
+  background: rgba(255, 255, 255, 0.25);
+  border-left: 4px solid #ffd700;
+}
+
+.mobile-menu-item.active-mobile i {
+  color: #ffd700;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+  .menu-item {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+  
+  .college-title {
+    font-size: 1.5rem;
+  }
+  
+  .logo-img {
+    width: 60px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 992px) {
+  .desktop-menu {
+    display: none;
+  }
+  
+  .mobile-toggle-btn {
+    display: flex;
+  }
+  
+  .nav-container {
+    padding: 0;
+  }
+  
+  .header-row {
+    gap: 1rem;
+  }
+  
+  .college-title {
+    font-size: 1.3rem;
+  }
+  
+  .college-description {
+    font-size: 0.75rem;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .header-row {
+    gap: 0.75rem;
+  }
+  
+  .college-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .college-description {
+    font-size: 0.7rem;
+    line-height: 1.3;
+  }
+  
+  .logo-img {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .mobile-menu-item {
+    padding: 0.9rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  .mobile-menu-header h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 580px) {
+  .top-header {
+    padding: 0.75rem;
+  }
+  
+  .header-row {
+    gap: 0.5rem;
+  }
+  
+  .college-title {
+    font-size: 0.9rem;
+  }
+  
+  .college-description {
+    font-size: 0.6rem;
+  }
+  
+  .logo-img {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .mobile-menu-item {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .college-title {
+    font-size: 0.85rem;
+  }
+  
+  .college-description {
+    display: none;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .mobile-menu-item {
+    padding: 0.75rem 1.2rem;
+    font-size: 0.9rem;
+  }
+  
+  .mobile-menu-header {
+    padding: 1rem 1.2rem;
+  }
+  
+  .mobile-menu-header h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Animations ===== */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-item {
+  animation: fadeIn 0.3s ease forwards;
+  opacity: 0;
+}
+
+/* ===== Accessibility ===== */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.menu-item:focus-visible,
+.mobile-menu-item:focus-visible,
+.mobile-toggle-btn:focus-visible,
+.close-menu-btn:focus-visible {
+  outline: 2px solid #ffd700;
+  outline-offset: 2px;
+  border-radius: 4px;
+}

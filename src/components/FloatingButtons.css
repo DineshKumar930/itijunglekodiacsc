@@ -1,0 +1,248 @@
+/* components/FloatingButtons.css */
+
+.floating-buttons {
+  position: fixed;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.floating-buttons.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Left Side Button */
+.floating-btn-left {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  pointer-events: auto;
+  z-index: 1000;
+}
+
+/* Right Side Buttons Container */
+.floating-buttons-right {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  pointer-events: auto;
+  z-index: 1000;
+}
+
+/* Common Button Styles */
+.floating-btn {
+  cursor: pointer;
+  border-radius: 50px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.5s ease;
+  font-family: inherit;
+}
+
+.floating-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.floating-btn:active {
+  transform: translateY(0);
+}
+
+.btn-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.btn-text {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Brochure Button (Left Side) */
+.brochure-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.brochure-btn:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+/* Call Button */
+.call-btn {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  color: white;
+}
+
+.call-btn:hover {
+  background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .floating-btn-left {
+    left: 15px;
+    bottom: 15px;
+  }
+  
+  .floating-buttons-right {
+    right: 15px;
+    bottom: 15px;
+    gap: 10px;
+  }
+  
+  .floating-btn {
+    padding: 10px 16px;
+  }
+  
+  .btn-icon {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .btn-text {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Show only icons on very small screens */
+  .floating-btn {
+    padding: 12px;
+    border-radius: 50%;
+  }
+  
+  .btn-text {
+    display: none;
+  }
+  
+  .btn-icon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  /* Alternative: Show text with smaller font */
+  /* Uncomment below if you want to keep text */
+  /*
+  .floating-btn {
+    padding: 8px 12px;
+    border-radius: 50px;
+  }
+  
+  .btn-text {
+    display: inline-block;
+    font-size: 10px;
+  }
+  
+  .btn-icon {
+    width: 16px;
+    height: 16px;
+  }
+  */
+}
+
+/* Hover effect for desktop */
+@media (min-width: 769px) {
+  .floating-btn-left {
+    animation: slideInLeft 0.5s ease;
+  }
+  
+  .floating-buttons-right .floating-btn {
+    animation: slideInRight 0.5s ease;
+  }
+  
+  .floating-buttons-right .floating-btn:first-child {
+    animation-delay: 0.1s;
+  }
+  
+  .floating-buttons-right .floating-btn:last-child {
+    animation-delay: 0.2s;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Pulse animation for attention (optional) */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.whatsapp-btn {
+  animation: pulse 2s infinite;
+}
+
+/* Reduce animation on hover */
+.whatsapp-btn:hover {
+  animation: none;
+}

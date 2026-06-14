@@ -1,0 +1,82 @@
+// components/Footer.jsx - UPDATED
+import React from 'react';
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
+import './Footer.css';
+
+const Footer = () => {
+  return (
+    <footer className="footer">
+      <div className="container">
+        <div className="footer-grid">
+          <div className="footer-section">
+            <h3>राजकीय औद्योगिक प्रशिक्षण संस्थान</h3>
+            <p>Jungle Kodia, Gorakhpur<br />Empowering Youth Since 1985</p>
+            <div className="contact-details">
+              <p><FaMapMarkerAlt aria-hidden="true" /> <span>Kazipur, Dohariya Bazar, Gorakhpur, UP - 273015</span></p>
+              <p><FaPhone aria-hidden="true" /> <span>+91-9161132939</span></p>
+              <p><FaEnvelope aria-hidden="true" /> <span>vinay.kumarcsc@csc.gov.in</span></p>
+            </div>
+          </div>
+          
+          <div className="footer-section">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#courses">Courses</a></li>
+              <li><a href="#admission">Admission</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div className="footer-section">
+            <h4>Student Corner</h4>
+            <ul>
+              <li><a href="#">Student Login</a></li>
+              <li><a href="#">Exam Results</a></li>
+              <li><a href="#">Scholarships</a></li>
+              <li><a href="#">Placement Cell</a></li>
+              <li><a href="#">Alumni Network</a></li>
+            </ul>
+          </div>
+          
+          <div className="footer-section">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="#">Download Brochure</a></li>
+              <li><a href="#">Academic Calendar</a></li>
+              <li><a href="#">Fee Structure</a></li>
+              <li><a href="#">RTI</a></li>
+              <li><a href="#">Tender Notice</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div className="footer-bottom">
+          <div className="social-icons">
+            <a href="#" aria-label="Facebook"><FaFacebook /></a>
+            <a href="#" aria-label="Twitter"><FaTwitter /></a>
+            <a href="#" aria-label="LinkedIn"><FaLinkedin /></a>
+            <a href="#" aria-label="Instagram"><FaInstagram /></a>
+          </div>
+          <div className="copyright">
+  <p>&copy; 2024 Government ITI Jungle Kodia, Gorakhpur. All rights reserved.</p>
+  <p>
+    Developed & Designed by{" "}
+    <a 
+      href="https://dkwebsoft.netlify.app" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      className="developer-link"
+    >
+      dkwebsoft
+    </a>
+  </p>
+</div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;

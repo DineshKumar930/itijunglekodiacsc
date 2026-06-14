@@ -1,0 +1,217 @@
+.trades-section {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #0b2b3b, #1a4a5f);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* Grid Layout - Responsive */
+.trades-grid-t {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards on desktop */
+  gap: 1.5rem;
+}
+
+.trade-card {
+  background: white;
+  border-radius: 20px;
+  padding: 1.8rem;
+  text-align: center;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.07);
+}
+
+.trade-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: var(--card-color);
+  transition: height 0.3s;
+}
+
+.trade-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+   border: 1px dotted teal;
+}
+
+.trade-card:hover::before {
+  height: 8px;
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  color: #2c3e50;
+}
+
+.card-details {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.card-details span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-btn {
+  background: linear-gradient(135deg, #0b2b3b, #1a4a5f);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.3rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 0.8rem;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-btn:hover {
+  transform: scale(1.05);
+  gap: 0.8rem;
+ 
+}
+
+/* Tablet View (768px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .trades-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 cards on tablet */
+    gap: 1.2rem;
+  }
+  
+  .trade-card {
+    padding: 1.5rem;
+  }
+  
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Mobile View (max-width: 768px) - 2x2 Grid */
+@media (max-width: 768px) {
+  .trades-section {
+    padding: 2rem 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 0.95rem;
+  }
+  
+  .trades-grid-t {
+    grid-template-columns: repeat(2, 1fr); /* 2 cards in a row on mobile */
+    gap: 1rem;
+  }
+  
+  .trade-card {
+    padding: 1.2rem;
+  }
+  
+  .card-icon {
+    font-size: 2.2rem;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-details {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 0.8rem 0;
+    font-size: 0.8rem;
+  }
+  
+  .card-details span {
+    justify-content: center;
+  }
+  
+  .card-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .trades-grid-t {
+    gap: 0.8rem;
+  }
+  
+  .trade-card {
+    padding: 1rem;
+  }
+  
+  .card-icon {
+    font-size: 1.8rem;
+  }
+  
+  .card-title {
+    font-size: 0.9rem;
+  }
+  
+  .card-details {
+    font-size: 0.7rem;
+  }
+  
+  .card-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.7rem;
+  }
+}
