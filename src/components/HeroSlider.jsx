@@ -153,7 +153,7 @@ const HeroSlider = () => {
     },
     {
       id: 4,
-      name: 'Mechanic Diesel',
+      name: 'Electronics Mechanic',
       duration: '2 Years',
       seats: 35,
       icon: <Tool size={40} />,
@@ -169,7 +169,56 @@ const HeroSlider = () => {
     },
     {
       id: 6,
-      name: 'Electronics Mechanic',
+      name: 'CHNM',
+      duration: '2 Years',
+      seats: 35,
+      icon: <Cpu size={40} />,
+      description: 'PCB design, circuit troubleshooting, and electronic device repair.'
+    },
+    {
+      id: 7,
+      name: 'MMV',
+      duration: '2 Years',
+      seats: 35,
+      icon: <Tool size={40} />,
+      description: 'Diesel engine repair, maintenance, and troubleshooting.'
+    },
+    {
+      id: 8,
+      name: 'RAC',
+      duration: '2 Years',
+      seats: 40,
+      icon: <Wrench size={40} />,
+      description: 'Assembly, fitting, machining, and precision measurement techniques.'
+    },
+    {
+      id: 9,
+      name: 'Physiotherapy',
+      duration: '2 Years',
+      seats: 35,
+      icon: <Cpu size={40} />,
+      description: 'PCB design, circuit troubleshooting, and electronic device repair.'
+    },
+    ,
+    {
+      id: 10,
+      name: 'Finance Executive',
+      duration: '2 Years',
+      seats: 35,
+      icon: <Tool size={40} />,
+      description: 'Diesel engine repair, maintenance, and troubleshooting.'
+    },
+    {
+      id: 11,
+      name: 'Turner',
+      duration: '2 Years',
+      seats: 40,
+      icon: <Wrench size={40} />,
+      description: 'Assembly, fitting, machining, and precision measurement techniques.'
+    },
+    {
+      id: 12,
+      name: 'Cosmetology',
       duration: '2 Years',
       seats: 35,
       icon: <Cpu size={40} />,

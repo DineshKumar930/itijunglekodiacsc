@@ -68,17 +68,17 @@ const Contact = () => {
     {
       icon: <MapPin size={28} />,
       title: 'Visit Us',
-      details: ['Jungle Kodia, Lucknow Road', 'Uttar Pradesh - 226001', 'India']
+      details: ['Jungle Kodia,Kazipur, Dohariya Bazar, Gorakhpur', 'Uttar Pradesh - 273015', 'India']
     },
     {
       icon: <Phone size={28} />,
       title: 'Call Us',
-      details: ['+91 98765 43210', '+91 87654 32109', '+91 76543 21098 (Admissions)']
+      details: ['+91 9161132939 (Admissions)']
     },
     {
       icon: <Mail size={28} />,
       title: 'Email Us',
-      details: ['info@itijunglekodia.edu.in', 'admissions@itijunglekodia.edu.in', 'support@itijunglekodia.edu.in']
+      details: ['vinay.kumarcsc@csc.gov.in']
     },
     {
       icon: <Clock size={28} />,

@@ -7,14 +7,14 @@ const Trades = () => {
     { icon: "🔧", name: "Fitter", duration: "2 Years", seats: 42, color: "#4ecdc4" },
     { icon: "🔥", name: "Welder", duration: "1 Year", seats: 28, color: "#ff9f43" },
     { icon: "💻", name: "COPA", duration: "1 Year", seats: 28, color: "#a29bfe" },
-    { icon: "🏗️", name: "Mechanic Diesel", duration: "2 Years", seats: 28, color: "#fd79a8" },
-    { icon: "🖥️", name: "Computer Hardware", duration: "1 Year", seats: 28, color: "#00cec9" },
-    { icon: "💻", name: "COPA", duration: "1 Year", seats: 28, color: "#a29bfe" },
-    { icon: "🏗️", name: "Mechanic Diesel", duration: "2 Years", seats: 28, color: "#fd79a8" },
-    { icon: "🖥️", name: "Computer Hardware", duration: "1 Year", seats: 28, color: "#00cec9" },
-    { icon: "💻", name: "COPA", duration: "1 Year", seats: 28, color: "#a29bfe" },
-    { icon: "🏗️", name: "Mechanic Diesel", duration: "2 Years", seats: 28, color: "#fd79a8" },
-    { icon: "🖥️", name: "Computer Hardware", duration: "1 Year", seats: 28, color: "#00cec9" }
+    { icon: "🏗️", name: "MMV", duration: "2 Years", seats: 28, color: "#fd79a8" },
+    { icon: "🖥️", name: "Cosmetology", duration: "1 Year", seats: 28, color: "#00cec9" },
+    { icon: "💻", name: "CHNM", duration: "1 Year", seats: 28, color: "#a29bfe" },
+    { icon: "🏗️", name: "Turner", duration: "2 Years", seats: 28, color: "#fd79a8" },
+    { icon: "🖥️", name: "RAC", duration: "1 Year", seats: 28, color: "#00cec9" },
+    { icon: "💻", name: "Electronics Mechanic", duration: "1 Year", seats: 28, color: "#a29bfe" },
+    { icon: "🏗️", name: "Physiotherapy", duration: "2 Years", seats: 28, color: "#fd79a8" },
+    { icon: "🖥️", name: "Finance Executive", duration: "1 Year", seats: 28, color: "#00cec9" }
   ]
 
   return (
