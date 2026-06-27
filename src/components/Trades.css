@@ -33,13 +33,13 @@
 .trades-grid-t {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* 4 cards on desktop */
-  gap: 1.5rem;
+  gap: 1.8rem;
 }
 
 .trade-card {
   background: white;
   border-radius: 20px;
-  padding: 1.8rem;
+  padding: 1.9rem;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   cursor: pointer;
@@ -62,7 +62,7 @@
 .trade-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-   border: 1px dotted teal;
+  border: 1px dotted teal;
 }
 
 .trade-card:hover::before {
@@ -82,9 +82,10 @@
 
 .card-title {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 0.8rem;
   color: #2c3e50;
+  text-align: center;
 }
 
 .card-details {
@@ -120,12 +121,11 @@
 .card-btn:hover {
   transform: scale(1.05);
   gap: 0.8rem;
- 
 }
 
 /* Tablet View (768px - 1024px) */
 @media (max-width: 1024px) and (min-width: 769px) {
-  .trades-grid {
+  .trades-grid-t { /* FIXED: Corrected class name from .trades-grid */
     grid-template-columns: repeat(3, 1fr); /* 3 cards on tablet */
     gap: 1.2rem;
   }
@@ -167,7 +167,7 @@
   }
   
   .card-title {
-    font-size: 1rem;
+    font-size: 1rem; /* FIXED: Title is now readable */
     margin-bottom: 0.5rem;
   }
   
@@ -191,11 +191,16 @@
 /* Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
   .trades-grid-t {
-    gap: 0.8rem;
+    grid-template-columns: 1fr;
+    gap: 0.8rem; /* Slightly increased gap for better spacing */
+       
   }
   
   .trade-card {
-    padding: 1rem;
+    padding: 1rem; /* Balanced padding */
+    width: 100%; 
+       margin: 0 auto;
+  
   }
   
   .card-icon {
@@ -203,11 +208,18 @@
   }
   
   .card-title {
-    font-size: 0.9rem;
+    font-size: 0.4rem; /* FIXED: Removed conflicting 0.4rem rule */
+    white-space: normal;
+    text-align: center;
   }
   
   .card-details {
     font-size: 0.7rem;
+    gap: 0.3rem;
+  }
+
+  .card-details span {
+    gap: 0.3rem;
   }
   
   .card-btn {

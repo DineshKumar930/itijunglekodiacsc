@@ -30,7 +30,7 @@ const FloatingButtons = () => {
   const phoneNumber = "+9161132939";
   
   // Brochure PDF URL (replace with your actual PDF file path)
-  const brochureUrl = "/brochure/government-iti-brochure.pdf";
+  const brochureUrl = "/images/brochure.pdf";
   
   // Alternative: Google Drive link
   // const brochureUrl = "https://drive.google.com/file/d/YOUR_FILE_ID/view";

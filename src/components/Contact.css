@@ -487,7 +487,7 @@
 }
 
 .stat-block {
-  color: var(--white);
+  color: white;
   padding: 1rem;
   transition: var(--transition);
 }
@@ -498,14 +498,16 @@
 }
 
 .stat-number {
-  font-size: 2.5rem;
-  font-weight: 800;
+  font-size: 1.5rem;
+  font-weight: 500;
   margin-bottom: 0.5rem;
+  color: white;
 }
 
 .stat-label {
   font-size: 0.95rem;
   opacity: 0.9;
+  color: white;
 }
 
 .stat-block:hover {

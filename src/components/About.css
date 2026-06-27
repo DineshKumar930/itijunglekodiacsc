@@ -43,6 +43,8 @@
   animation: rotate 20s linear infinite;
 }
 
+.intro-image { display: flex; align-items: center; justify-content: center; } .institute-image { width: 100%; height:auto; object-fit: cover; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.15); transition: transform 0.3s ease; } .institute-image:hover { transform: scale(1.02); }
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -208,7 +210,7 @@
   gap: 2rem;
 }
 
-.stat-card {
+.stat-card-a {
   background: white;
   text-align: center;
   padding: 2rem;
@@ -224,8 +226,8 @@
 }
 
 .stat-icon {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   margin: 0 auto 1rem;
   display: flex;
   align-items: center;
@@ -235,16 +237,16 @@
   color: white;
 }
 
-.stat-number {
-  font-size: 2.5rem;
-  font-weight: 800;
-  color: #2c3e50;
+.stat-number-a {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #354c62;
   margin-bottom: 0.5rem;
 }
 
-.stat-label {
+.stat-label-a {
   color: #666;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* Mission & Vision */
@@ -342,6 +344,7 @@
 .facility-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border: 1px dotted red;
 }
 
 .facility-icon {
@@ -395,6 +398,7 @@
 .feature:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border: 1px dotted red;
 }
 
 .feature i {

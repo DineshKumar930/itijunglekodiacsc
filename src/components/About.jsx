@@ -20,10 +20,10 @@ const About = () => {
     const duration = 2000
     const stepTime = 20
     const targetValues = {
-      students: 2850,
+      students: 482,
       trades: 12,
-      placements: 2150,
-      instructors: 15
+      placements: 47,
+      instructors: 23
     }
 
     const intervals = {}
@@ -63,7 +63,6 @@ const About = () => {
     { icon: "🏭", name: "Modern Workshops", desc: "State-of-the-art equipment" },
     { icon: "💻", name: "Computer Labs", desc: "Latest software & hardware" },
     { icon: "📚", name: "Digital Library", desc: "E-books & resources" },
-    { icon: "🏠", name: "Hostel Facility", desc: "Separate for boys & girls" },
     { icon: "🚌", name: "Transportation", desc: "Bus facility available" },
     { icon: "🏥", name: "Medical Support", desc: "24/7 health center" }
   ]
@@ -89,7 +88,7 @@ const About = () => {
             <div className="intro-text">
               <h2>Welcome to Our Institute</h2>
               <p>
-                Government ITI Jungle Koida, established in 2012, is a premier technical training institute 
+                Government ITI Jungle Koida, established in 2025, is a premier technical training institute 
                 located in the scenic region of Sundargarh, Odisha. Operating under the Public-Private Partnership 
                 (PPP) mode with CSCSPV, we are committed to providing world-class vocational training to students 
                 from rural and semi-urban areas.
@@ -106,9 +105,9 @@ const About = () => {
               </div>
             </div>
             <div className="intro-image">
-              <div className="image-placeholder">
-                <i className="fas fa-university"></i>
-              </div>
+              <div className='institute-image'>
+                <img src='/images/iti.png'/>
+            </div>
             </div>
           </div>
         </div>
@@ -117,12 +116,12 @@ const About = () => {
         <div className="stats-section">
           <div className="stats-grid">
             {stats.map(stat => (
-              <div key={stat.id} className="stat-card" style={{ borderBottomColor: stat.color }}>
+              <div key={stat.id} className="stat-card-a" style={{ borderBottomColor: stat.color }}>
                 <div className="stat-icon" style={{ background: stat.color }}>
                   <i className={stat.icon}></i>
                 </div>
-                <div className="stat-number">{counters[stat.id]}+</div>
-                <div className="stat-label">{stat.label}</div>
+                <div className="stat-number-a">{counters[stat.id]}+</div>
+                <div className="stat-label-a">{stat.label}</div>
               </div>
             ))}
           </div>

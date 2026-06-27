@@ -45,19 +45,97 @@ const Admission = () => {
 
   const admissionSteps = [
     { step: 1, title: "Fill Application", desc: "Submit online application form", icon: "📝" },
-    { step: 2, title: "Document Verification", desc: "Submit required documents", icon: "📄" },
-    { step: 3, title: "Entrance Test", desc: "Merit-based selection", icon: "✍️" },
+    { step: 2, title: "Merit List", desc: "Submit required documents", icon: "📄" },
+    { step: 3, title: "Document Verification", desc: "Merit-based selection", icon: "📄" },
     { step: 4, title: "Fee Payment", desc: "Complete admission process", icon: "💰" }
   ]
 
   const eligibility = [
-    { trade: "Electrician", eligibility: "10th Pass with Science & Maths", duration: "2 Years", fees: "₹8,000/year" },
-    { trade: "Fitter", eligibility: "10th Pass with Science & Maths", duration: "2 Years", fees: "₹8,000/year" },
-    { trade: "Welder", eligibility: "8th Pass", duration: "1 Year", fees: "₹6,000/year" },
-    { trade: "COPA", eligibility: "10th Pass", duration: "1 Year", fees: "₹7,000/year" },
-    { trade: "Mechanic Diesel", eligibility: "10th Pass", duration: "2 Years", fees: "₹9,000/year" },
-    { trade: "Computer Hardware", eligibility: "10th Pass", duration: "1 Year", fees: "₹7,500/year" }
-  ]
+  {
+    trade: "Electrician",
+    eligibility: "10th Pass",
+    duration: "2 Years",
+    govtFees: "₹480/year",
+    privateFees: "₹18,000/year"
+  },
+  {
+    trade: "Fitter",
+    eligibility: "10th Pass",
+    duration: "2 Years",
+    govtFees: "₹480/year",
+    privateFees: "₹18,000/year"
+  },
+  {
+    trade: "Welder",
+    eligibility: "8th Pass",
+    duration: "1 Year",
+    govtFees: "₹480/year",
+    privateFees: "₹18,000/year"
+  },
+  {
+    trade: "COPA",
+    eligibility: "10th Pass",
+    duration: "1 Year",
+    govtFees: "₹480/year",
+    privateFees: "₹15,400/year"
+  },
+  {
+    trade: "Electronics Mechanic",
+    eligibility: "10th Pass",
+    duration: "2 Years",
+    govtFees: "₹480/year",
+    privateFees: "₹18,000/year"
+  },
+  {
+    trade: "CHNM",
+    eligibility:"10th Pass",
+    duration: "1 Year",
+    govtFees: "₹480/year",
+    privateFees: "₹15,400/year"
+  },
+   {
+    trade: "Cosmetology ",
+    eligibility: "10th Pass",
+    duration: "1 Years",
+    govtFees: "₹480/year",
+    privateFees: "₹15,400/year"
+  },
+  {
+    trade: "Finance Executive",
+    eligibility: "10th Pass",
+    duration: "1 Years",
+    govtFees: "₹480/year",
+    privateFees: "₹15,400/year"
+  },
+  {
+    trade: "Physiotherapy",
+    eligibility: "8th Pass",
+    duration: "1 Year",
+    govtFees: "₹480/year",
+    privateFees: "₹15,400/year"
+  },
+  {
+    trade: "MMV",
+    eligibility: "10th Pass",
+    duration: "2 Year",
+    govtFees: "₹480/year",
+    privateFees: "₹18,000/year"
+  },
+  {
+    trade: "RAC",
+    eligibility: "10th Pass",
+    duration: "2 Years",
+    govtFees: "₹480/year",
+    privateFees: "₹18,000/year"
+  },
+  {
+    trade: "Turner",
+    eligibility: "10th Pass",
+    duration: "2 Year",
+    govtFees: "₹480/year",
+    privateFees: "₹18,000/year"
+  }
+];
 
   const documents = [
     "10th Marksheet & Certificate",
@@ -73,13 +151,13 @@ const Admission = () => {
         {/* Hero Banner */}
         <div className="admission-hero">
           <h1 className="admission-hero-title">
-            <i className="fas fa-graduation-cap"></i> Admission 2024-25
+            <i className="fas fa-graduation-cap"></i> Admission 2026-27
           </h1>
           <p className="admission-hero-subtitle">
             Apply now for skill development courses and build your career
           </p>
           <div className="admission-badge">
-            <i className="fas fa-calendar-alt"></i> Last Date: 31st July 2024
+            <i className="fas fa-calendar-alt"></i> Last Date: 31st July 2026
           </div>
         </div>
 
@@ -108,7 +186,8 @@ const Admission = () => {
                   <th>Trade</th>
                   <th>Eligibility</th>
                   <th>Duration</th>
-                  <th>Annual Fees</th>
+                  <th>Govt. seat Fees</th>
+                  <th>Private seat Fees</th>
                 </tr>
               </thead>
               <tbody>
@@ -117,7 +196,8 @@ const Admission = () => {
                     <td><strong>{item.trade}</strong></td>
                     <td>{item.eligibility}</td>
                     <td>{item.duration}</td>
-                    <td className="fees">{item.fees}</td>
+                    <td className="fees">{item.govtFees}</td>
+                    <td className="fees">{item.privateFees}</td>
                   </tr>
                 ))}
               </tbody>
@@ -143,15 +223,14 @@ const Admission = () => {
           <div className="form-info">
             <h3><i className="fas fa-info-circle"></i> Important Information</h3>
             <ul>
-              <li><i className="fas fa-check-circle"></i> 50% scholarship for SC/ST/OBC students</li>
-              <li><i className="fas fa-check-circle"></i> Girls hostel available with security</li>
+              <li><i className="fas fa-check-circle"></i> 100% scholarship for SC/ST/OBC students</li>
               <li><i className="fas fa-check-circle"></i> Placement assistance guaranteed</li>
               <li><i className="fas fa-check-circle"></i> Industry visits & guest lectures</li>
               <li><i className="fas fa-check-circle"></i> Tool kit provided for some trades</li>
             </ul>
             <div className="contact-info">
-              <p><i className="fas fa-phone-alt"></i> Admission Helpline: +91 12345 67890</p>
-              <p><i className="fas fa-envelope"></i> Email: admission@itijunglekoida.edu.in</p>
+              <p><i className="fas fa-phone-alt"></i> Admission Helpline: +91 7217739743, 7217756874</p>
+              <p><i className="fas fa-envelope"></i> Email: itijunglekodiya@gmail.com</p>
             </div>
           </div>
 

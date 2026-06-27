@@ -5,7 +5,7 @@ import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules';
 import { 
   Star, Quote, Phone, Mail, MapPin, Clock, User, GraduationCap, 
   Award, Users, BookOpen, TrendingUp, ArrowRight, Calendar, 
-  MessageCircle, CheckCircle
+  MessageCircle, CheckCircle,HeartPulse,BadgeIndianRupee,Settings,Scissors,Snowflake,Car,CircuitBoard
 } from 'lucide-react';
 
 // Import Swiper styles
@@ -17,7 +17,7 @@ import 'swiper/css/effect-fade';
 // Import the CSS file
 import './HeroSlider.css';
 
-const HeroSlider = () => {
+const HeroSlider = ({ setActiveTab }) => {
   const marqueeRef = useRef(null);
 
   // Hero Slider Data
@@ -65,9 +65,9 @@ const HeroSlider = () => {
   const testimonialsData = [
     {
       id: 1,
-      name: 'Rahul Sharma',
+      name: 'Dhannajay',
       trade: 'Electrician (2022 Batch)',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      image: '/images/dhan.jpeg',
       rating: 5,
       review: 'The practical training at ITI Jungle Kodia is outstanding. The workshops are well-equipped and the instructors are very knowledgeable. I got placed immediately after completion.',
       company: 'Tata Power',
@@ -75,18 +75,18 @@ const HeroSlider = () => {
     },
     {
       id: 2,
-      name: 'Priya Patel',
-      trade: 'COPA (2023 Batch)',
+      name: 'Amisha Bharti',
+      trade: 'Finance Executive (2026 Batch)',
       image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       rating: 5,
       review: 'Excellent computer lab and experienced faculty. The curriculum is industry-relevant and they also provide soft skills training. Highly recommended!',
-      company: 'Infosys',
-      position: 'Computer Operator'
+      company: 'Polymedicure Pvt. Ltd',
+      position: 'Finance Executive'
     },
     {
       id: 3,
-      name: 'Amit Kumar',
-      trade: 'Welder (2021 Batch)',
+      name: 'Mukesh Yadav',
+      trade: 'Welder (2025 Batch)',
       image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       rating: 4,
       review: 'The welding workshop is top-notch with modern equipment. Faculty members are very supportive and helped me master advanced welding techniques.',
@@ -95,7 +95,7 @@ const HeroSlider = () => {
     },
     {
       id: 4,
-      name: 'Sneha Singh',
+      name: 'Chandan Gupta',
       trade: 'Mechanic Diesel (2022 Batch)',
       image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
       rating: 5,
@@ -105,24 +105,15 @@ const HeroSlider = () => {
     },
     {
       id: 5,
-      name: 'Vikram Singh',
-      trade: 'Fitter (2023 Batch)',
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+      name: 'Sarvesh',
+      trade: 'Electronic mechanic (2025-26 Batch)',
+      image: '/images/sarvesh.jpeg',
       rating: 5,
       review: 'Great infrastructure and teaching methodology. The industry visits and guest lectures helped us understand real-world applications.',
       company: 'BHEL',
       position: 'Fitter'
-    },
-    {
-      id: 6,
-      name: 'Neha Gupta',
-      trade: 'Electronics Mechanic (2022 Batch)',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-      rating: 4,
-      review: 'The faculty goes above and beyond to help students. The modern electronics lab and practical sessions are excellent.',
-      company: 'Samsung',
-      position: 'Electronics Technician'
     }
+   
   ];
 
   // Trades/Courses Data
@@ -131,7 +122,7 @@ const HeroSlider = () => {
       id: 1,
       name: 'Electrician',
       duration: '2 Years',
-      seats: 40,
+      seats: 20,
       icon: <Zap size={40} />,
       description: 'Learn wiring, motor control, house wiring, industrial electrical systems.'
     },
@@ -139,7 +130,7 @@ const HeroSlider = () => {
       id: 2,
       name: 'Welder',
       duration: '1 Year',
-      seats: 30,
+      seats: 40,
       icon: <Award size={40} />,
       description: 'Master arc welding, gas welding, TIG/MIG techniques and fabrication.'
     },
@@ -147,7 +138,7 @@ const HeroSlider = () => {
       id: 3,
       name: 'COPA',
       duration: '1 Year',
-      seats: 30,
+      seats: 48,
       icon: <Monitor size={40} />,
       description: 'Computer operations, programming basics, DTP, and office automation.'
     },
@@ -155,23 +146,23 @@ const HeroSlider = () => {
       id: 4,
       name: 'Electronics Mechanic',
       duration: '2 Years',
-      seats: 35,
-      icon: <Tool size={40} />,
+      seats: 24,
+      icon: <CircuitBoard size={40} />,
       description: 'Diesel engine repair, maintenance, and troubleshooting.'
     },
     {
       id: 5,
       name: 'Fitter',
       duration: '2 Years',
-      seats: 40,
+      seats: 20,
       icon: <Wrench size={40} />,
       description: 'Assembly, fitting, machining, and precision measurement techniques.'
     },
     {
       id: 6,
       name: 'CHNM',
-      duration: '2 Years',
-      seats: 35,
+      duration: '1 Years',
+      seats: 48,
       icon: <Cpu size={40} />,
       description: 'PCB design, circuit troubleshooting, and electronic device repair.'
     },
@@ -179,85 +170,87 @@ const HeroSlider = () => {
       id: 7,
       name: 'MMV',
       duration: '2 Years',
-      seats: 35,
-      icon: <Tool size={40} />,
+      seats: 24,
+      icon: <Car size={40} />,
       description: 'Diesel engine repair, maintenance, and troubleshooting.'
     },
     {
       id: 8,
       name: 'RAC',
       duration: '2 Years',
-      seats: 40,
-      icon: <Wrench size={40} />,
+      seats: 24,
+      icon: <Snowflake size={40} />,
       description: 'Assembly, fitting, machining, and precision measurement techniques.'
     },
     {
       id: 9,
       name: 'Physiotherapy',
-      duration: '2 Years',
-      seats: 35,
-      icon: <Cpu size={40} />,
+      duration: '1 Years',
+      seats: 48,
+      icon: <HeartPulse size={40} />,
       description: 'PCB design, circuit troubleshooting, and electronic device repair.'
     },
     ,
     {
       id: 10,
       name: 'Finance Executive',
-      duration: '2 Years',
-      seats: 35,
-      icon: <Tool size={40} />,
+      duration: '1 Years',
+      seats: 48,
+      icon: <BadgeIndianRupee size={40} />,
       description: 'Diesel engine repair, maintenance, and troubleshooting.'
     },
     {
       id: 11,
       name: 'Turner',
       duration: '2 Years',
-      seats: 40,
-      icon: <Wrench size={40} />,
+      seats: 20,
+      icon: <Settings size={40} />,
       description: 'Assembly, fitting, machining, and precision measurement techniques.'
     },
     {
       id: 12,
       name: 'Cosmetology',
-      duration: '2 Years',
-      seats: 35,
-      icon: <Cpu size={40} />,
+      duration: '1 Years',
+      seats: 48,
+      icon: <Scissors size={40} />,
       description: 'PCB design, circuit troubleshooting, and electronic device repair.'
     }
   ];
 
   // Marquee News Items
   const newsItems = [
-    "🎓 Admissions Open for 2024-25 Session | Limited Seats Available",
+    "🎓 Admissions Open for 2026-27 Session | Limited Seats Available",
     "🏆 Placement Drive: Tata Motors recruiting our final year students on 25th March",
     "📢 New Advanced Welding Workshop Inaugurated by Industry Experts",
-    "💼 95% of 2023 batch placed in top companies | Congratulations to all!",
-    "🔧 Free Skill Development Workshop for Women on Every Saturday",
-    "📅 Annual Tech Fest 'Kaushal 2024' scheduled for 15th April"
+
   ];
 
   // Auto-scroll marquee effect
-  useEffect(() => {
-    const marquee = marqueeRef.current;
-    if (marquee) {
-      let scrollAmount = 0;
-      const speed = 1;
-      
-      const scroll = () => {
-        if (marquee) {
-          scrollAmount += speed;
-          if (scrollAmount >= marquee.scrollWidth / 2) {
-            scrollAmount = 0;
-          }
-          marquee.style.transform = `translateX(-${scrollAmount}px)`;
-        }
-        requestAnimationFrame(scroll);
-      };
-      
-      const animation = requestAnimationFrame(scroll);
-      return () => cancelAnimationFrame(animation);
+ useEffect(() => {
+  const marquee = marqueeRef.current;
+  if (!marquee) return;
+
+  let scrollAmount = 0;
+  let animationId;
+
+  const speed = window.innerWidth <= 768 ? 0.4 : 1;
+
+  const scroll = () => {
+    scrollAmount += speed;
+
+    if (scrollAmount >= marquee.scrollWidth / 2) {
+      scrollAmount = 0;
     }
-  }, []);
+
+    marquee.style.transform = `translate3d(-${scrollAmount}px,0,0)`;
+
+    animationId = requestAnimationFrame(scroll);
+  };
+
+  animationId = requestAnimationFrame(scroll);
+
+  return () => cancelAnimationFrame(animationId);
+}, []);
 
   return (
     <div className="home-page">
@@ -302,6 +295,14 @@ const HeroSlider = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                     className="hero-btn"
+                  onClick={() => {
+    setActiveTab("Admission");
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }}
+
                   >
                     {slide.buttonText} <ArrowRight size={20} />
                   </motion.button>
@@ -311,10 +312,7 @@ const HeroSlider = () => {
           ))}
         </Swiper>
         <div className="hero-pagination"></div>
-        <div className="hero-nav">
-          <button className="hero-prev">‹</button>
-          <button className="hero-next">›</button>
-        </div>
+      
       </section>
 
       {/* Marquee News Section */}
@@ -372,7 +370,6 @@ const HeroSlider = () => {
 मैं आप सभी को हमारे आईटीआई परिवार का हिस्सा बनने और उज्ज्वल एवं सफल भविष्य की इस प्रेरणादायक यात्रा की शुरुआत करने के लिए हार्दिक आमंत्रण देता हूँ।
               </p>
               <div className="signature">
-                <img src="https://www.signwell.com/assets/signature-icon.svg" alt="Signature" />
                 <div className="signature-text">
                   <strong>Mr. Akhil Kumar</strong>
                   <span>Director</span>
@@ -407,7 +404,11 @@ const HeroSlider = () => {
                   <span><Users size={16} /> {trade.seats} Seats</span>
                 </div>
                 <p>{trade.description}</p>
-                <button className="trade-btn">Know More <ArrowRight size={16} /></button>
+                <button className="trade-btn"  onClick={() => { setActiveTab("Admission");
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });  }}>Know More <ArrowRight size={16} /></button>
               </motion.div>
             ))}
           </div>
@@ -492,21 +493,21 @@ const HeroSlider = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
-            className="stats-strip"
+            className="stats-strip-t"
           >
-            <div className="stat-item">
-              <div className="stat-number">500+</div>
+            <div className="stat-item-t">
+              <div className="stat-number">482+</div>
               <div className="stat-label">Students Placed</div>
             </div>
-            <div className="stat-item">
-              <div className="stat-number">50+</div>
+            <div className="stat-item-t">
+              <div className="stat-number">15+</div>
               <div className="stat-label">Recruiting Partners</div>
             </div>
-            <div className="stat-item">
-              <div className="stat-number">90%</div>
+            <div className="stat-item-t">
+              <div className="stat-number">97%</div>
               <div className="stat-label">Placement Rate</div>
             </div>
-            <div className="stat-item">
+            <div className="stat-item-t">
               <div className="stat-number">95%</div>
               <div className="stat-label">Student Satisfaction</div>
             </div>
@@ -536,31 +537,30 @@ const HeroSlider = () => {
                   <MapPin size={24} />
                   <div>
                     <strong>Address</strong>
-                    <p>Jungle Kodia, Lucknow Road, Uttar Pradesh - 226001</p>
+                    <p>Kazipur, Dohariya Bazar, Gorakhpur, UP - 273015</p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <Phone size={24} />
                   <div>
                     <strong>Phone</strong>
-                    <p>+91 98765 43210</p>
-                    <p>+91 87654 32109</p>
+                    <p>+91 72177 39743</p>
+                    <p>+91 72177 56874</p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <Mail size={24} />
                   <div>
                     <strong>Email</strong>
-                    <p>info@itijunglekodia.edu.in</p>
-                    <p>admissions@itijunglekodia.edu.in</p>
+                    <p>itijunglekodiya@gmail.com</p>
                   </div>
                 </div>
                 <div className="contact-item">
                   <Clock size={24} />
                   <div>
                     <strong>Office Hours</strong>
-                    <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
-                    <p>Saturday: 9:00 AM - 2:00 PM</p>
+                    <p>Monday - Saturday: 9:00 AM - 5:00 PM</p>
+                    <p></p>
                   </div>
                 </div>
               </div>

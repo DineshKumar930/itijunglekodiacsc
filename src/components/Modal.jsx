@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Modal.css";
 
-import admissionPoster from "../assets/ban.png"; // Change your image path
+import admissionPoster from "../assets/brochure.png"; // Change your image path
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);

@@ -73,17 +73,17 @@ const Contact = () => {
     {
       icon: <Phone size={28} />,
       title: 'Call Us',
-      details: ['+91 9161132939 (Admissions)']
+      details: ['+91 7217739743 (Admissions), 7217756874']
     },
     {
       icon: <Mail size={28} />,
       title: 'Email Us',
-      details: ['vinay.kumarcsc@csc.gov.in']
+      details: ['vinay.kumarcsc@csc.gov.in, itijunglekodiya@gmail.com']
     },
     {
       icon: <Clock size={28} />,
       title: 'Working Hours',
-      details: ['Mon - Fri: 9:00 AM - 5:00 PM', 'Saturday: 9:00 AM - 2:00 PM', 'Sunday: Closed']
+      details: ['Mon - Sat: 9:00 AM - 5:00 PM', 'Sunday: Closed']
     }
   ];
 
@@ -279,7 +279,7 @@ const Contact = () => {
                 <h3>Find Us Here</h3>
                 <div className="map-wrapper">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3558.234567890123!2d80.946166!3d26.846708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd991f170001%3A0xfc3d8b6c9f2d8e4!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3561.2511547135514!2d83.28023417414481!3d26.80013046492205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399147005441c19f%3A0x9a0454d699e4f1f9!2sGOVERNMENT%20ITI%20JUNGLE%20KODIA%2C%20GORAKHPUR!5e0!3m2!1sen!2sin!4v1782276367453!5m2!1sen!2sin" 
                     width="100%" 
                     height="250" 
                     style={{ border: 0 }}
@@ -339,7 +339,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <Users size={40} />
-              <div className="stat-number">5000+</div>
+              <div className="stat-number">482+</div>
               <div className="stat-label">Students Trained</div>
             </motion.div>
             <motion.div 
@@ -350,7 +350,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <Award size={40} />
-              <div className="stat-number">50+</div>
+              <div className="stat-number">15+</div>
               <div className="stat-label">Industry Partners</div>
             </motion.div>
             <motion.div 
@@ -361,7 +361,7 @@ const Contact = () => {
               viewport={{ once: true }}
             >
               <Calendar size={40} />
-              <div className="stat-number">15+</div>
+              <div className="stat-number">2+</div>
               <div className="stat-label">Years of Excellence</div>
             </motion.div>
             <motion.div 
@@ -403,10 +403,10 @@ const Contact = () => {
               <a href="#" className="social-icon facebook">
                 <FaFacebook size={24} />
               </a>
-              <a href="#" className="social-icon twitter">
+              <a href="https://youtube.com/@governmentitijunglekodiagkp?si=izPnmVNxzpU8SzYL" className="social-icon twitter">
                 <FaTwitter size={24} />
               </a>
-              <a href="#" className="social-icon instagram">
+              <a href="https://www.instagram.com/giti_497?igsh=MTluNG95OHF3N3Yxb" className="social-icon instagram">
                 <FaInstagram size={24} />
               </a>
               <a href="#" className="social-icon linkedin">

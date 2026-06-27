@@ -61,6 +61,10 @@
   color: #4a5568;
   margin: 0;
   line-height: 1.4;
+  font-weight: bold;
+ 
+
+  border-radius: 10px 10px;
 }
 
 .logo-img {
@@ -328,6 +332,7 @@
   .college-title {
     font-size: 1.1rem;
     margin-bottom: 0.2rem;
+    font-weight: bold;
   }
   
   .college-description {

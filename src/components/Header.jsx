@@ -5,7 +5,7 @@ const Header = ({ activeTab, setActiveTab }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   
-  const navItems = ['Home', 'About', 'Trades', 'Admission', 'Instructor','Contact']
+  const navItems = ['Home', 'About', 'Trades', 'Admission','Gallery', 'Team of Experts','Latest News','Contact']
 
   const toggleMenu = () => {
     setMobileOpen(!mobileOpen)
@@ -65,7 +65,7 @@ const Header = ({ activeTab, setActiveTab }) => {
           </div>
           
           <div className="header-title">
-            <h1 className="college-title">राजकीय औद्योगिक प्रशिक्षण संस्थान (आईटीआई) जंगल कोड़िया</h1>
+            <h1 className="college-title">राजकीय औद्योगिक प्रशिक्षण संस्थान जंगल कोड़िया गोरखपुर</h1>
             <p className="college-description">
               Operated by CSC SPV under Public-Private Partnership (PPP) Model
             </p>

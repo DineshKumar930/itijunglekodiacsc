@@ -2,20 +2,31 @@ import React from 'react'
 import './Trades.css'
 
 const Trades = () => {
-  const trades = [
-    { icon: "⚡", name: "Electrician", duration: "2 Years", seats: 42, color: "#ff6b6b" },
-    { icon: "🔧", name: "Fitter", duration: "2 Years", seats: 42, color: "#4ecdc4" },
-    { icon: "🔥", name: "Welder", duration: "1 Year", seats: 28, color: "#ff9f43" },
-    { icon: "💻", name: "COPA", duration: "1 Year", seats: 28, color: "#a29bfe" },
-    { icon: "🏗️", name: "MMV", duration: "2 Years", seats: 28, color: "#fd79a8" },
-    { icon: "🖥️", name: "Cosmetology", duration: "1 Year", seats: 28, color: "#00cec9" },
-    { icon: "💻", name: "CHNM", duration: "1 Year", seats: 28, color: "#a29bfe" },
-    { icon: "🏗️", name: "Turner", duration: "2 Years", seats: 28, color: "#fd79a8" },
-    { icon: "🖥️", name: "RAC", duration: "1 Year", seats: 28, color: "#00cec9" },
-    { icon: "💻", name: "Electronics Mechanic", duration: "1 Year", seats: 28, color: "#a29bfe" },
-    { icon: "🏗️", name: "Physiotherapy", duration: "2 Years", seats: 28, color: "#fd79a8" },
-    { icon: "🖥️", name: "Finance Executive", duration: "1 Year", seats: 28, color: "#00cec9" }
-  ]
+ const trades = [
+  { icon: "⚡", name: "Electrician", duration: "2 Years", seats: 20, color: "#ff6b6b" },
+
+  { icon: "🔧", name: "Fitter", duration: "2 Years", seats: 20, color: "#4ecdc4" },
+
+  { icon: "🔥", name: "Welder", duration: "1 Year", seats: 20, color: "#ff9f43" },
+
+  { icon: "💻", name: "COPA", duration: "1 Year", seats: 48, color: "#a29bfe" },
+
+  { icon: "🚗", name: "MMV", duration: "2 Years", seats: 24, color: "#fd79a8" },
+
+  { icon: "💄", name: "Cosmetology", duration: "1 Year", seats: 48, color: "#00cec9" },
+
+  { icon: "🧵", name: "CHNM", duration: "1 Year", seats: 48, color: "#6c5ce7" },
+
+  { icon: "⚙️", name: "Turner", duration: "2 Years", seats: 20, color: "#e17055" },
+
+  { icon: "❄️", name: "RAC", duration: "1 Year", seats: 24, color: "#0984e3" },
+
+  { icon: "📡", name: "Electronics Mechanic", duration: "2 Years", seats: 24, color: "#a29bfe" },
+
+  { icon: "🩺", name: "Physiotherapy", duration: "1 Year", seats: 48, color: "#00b894" },
+
+  { icon: "💰", name: "Finance Executive", duration: "1 Year", seats: 48, color: "#f39c12" }
+];
 
   return (
     <section className="trades-section">
@@ -33,7 +44,6 @@ const Trades = () => {
                 <span><i className="far fa-clock"></i> {trade.duration}</span>
                 <span><i className="fas fa-users"></i> {trade.seats} Seats</span>
               </div>
-              <button className="card-btn">Learn More <i className="fas fa-arrow-right"></i></button>
             </div>
           ))}
         </div>
